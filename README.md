@@ -34,7 +34,7 @@ The application will be available at `http://localhost:8501`
 
 ## Background
 
-The inspiration for this tool came from observing widespread concerns about housing affordability across social media and news platforms. Many people express feelings of hopelessness about ever entering the property market (e.g., numerous discussions on Reddit: https://www.google.com/search?&q=depressed+about+housing+market+reddit).
+The inspiration for this tool came from observing widespread concerns about housing affordability across social media and news platforms. Many people express feelings of hopelessness about ever entering the property market (e.g., numerous discussions on Reddit: https://www.google.com/search?&q=depressed+about+australian+housing+market+reddit).
 
 While property investment has traditionally been viewed as the primary path to wealth building, this tool aims to broaden the conversation by introducing alternative investment considerations.
 
