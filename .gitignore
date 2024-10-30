@@ -1,0 +1,12 @@
+dev
+__pycache__
+.DS_Store
+*.ipynb
+*.csv
+*.json
+*.jsonl
+*.parquet
+*.pickle
+*.pkl
+venv
+.venv
