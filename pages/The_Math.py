@@ -178,7 +178,7 @@ st.write("""
 Over time, your mortgage balance decreases as you make payments.
 """)
 
-st.header('3. How Your Home Investment Grows Over Time')
+st.header('3. How Your House Investment Grows Over Time')
 
 st.subheader('3.1 House Value Over Time')
 
@@ -230,7 +230,7 @@ As you make payments, your mortgage balance shrinks:
 st.latex(r'\text{Mortgage Balance}_t = \text{Mortgage Balance}_{t-1} - \text{Principal Payment}_t')
 
 st.write("""
-Each year, you owe the bank less and own more of your home, it's a bit like having a piggy bank.
+Each year, you owe the bank less and own more of your house, it's a bit like having a piggy bank.
 """)
 
 # Already calculated annual_balances in the previous section
@@ -251,7 +251,7 @@ fig_equity, ax_equity = plt.subplots()
 ax_equity.plot(years_house, equity)
 ax_equity.set_xlabel('Years')
 ax_equity.set_ylabel('Equity ($)')
-ax_equity.set_title('Equity in Home Over Time')
+ax_equity.set_title('Equity in House Over Time')
 ax_equity.grid(True)
 st.pyplot(fig_equity)
 
@@ -450,11 +450,11 @@ st.header('5. Comparing the Two Paths')
 st.subheader('5.1 Net Gain Over Time')
 
 st.write("""
-For the home:
+For the house:
 
 """)
 
-st.latex(r'\text{Home Net Gain}_t = \text{Inflation-Adjusted Equity}_t - \text{Cumulative Investment}_t')
+st.latex(r'\text{House Net Gain}_t = \text{Inflation-Adjusted Equity}_t - \text{Cumulative Investment}_t')
 
 st.write("""
 
@@ -474,18 +474,18 @@ Let\'s calculate and compare the net gains.
 
 """)
 
-# Calculate cumulative home investment
-cumulative_home_investment = [200000]  # Initial deposit
+# Calculate cumulative house investment
+cumulative_house_investment = [200000]  # Initial deposit
 for i in range(1, len(years_house)):
-    total_invested = cumulative_home_investment[-1] + annual_principal[i] + annual_costs_list[i]
-    cumulative_home_investment.append(total_invested)
+    total_invested = cumulative_house_investment[-1] + annual_principal[i] + annual_costs_list[i]
+    cumulative_house_investment.append(total_invested)
 
 # Calculate net gains
-home_net_gain = inflation_adjusted_equity - cumulative_home_investment
+house_net_gain = inflation_adjusted_equity - cumulative_house_investment
 btc_net_gain = inflation_adjusted_btc_value - cumulative_btc_investment
 
 fig_net_gain, ax_net_gain = plt.subplots()
-ax_net_gain.plot(years_house, home_net_gain, label='Home Net Gain')
+ax_net_gain.plot(years_house, house_net_gain, label='House Net Gain')
 ax_net_gain.plot(years_btc, btc_net_gain, label='BTC Net Gain')
 ax_net_gain.set_xlabel('Years')
 ax_net_gain.set_ylabel('Net Gain ($)')
@@ -495,7 +495,7 @@ ax_net_gain.grid(True)
 st.pyplot(fig_net_gain)
 
 st.write("""
-This chart compares your net gain from investing in a home versus Bitcoin over time.
+This chart compares your net gain from investing in a house versus Bitcoin over time.
 """)
 
 st.subheader('5.2 How Many Bitcoins to Buy a House?')
@@ -529,7 +529,7 @@ As Bitcoin\'s price grows faster than the house value, you need fewer Bitcoins t
 st.header('6. Wrapping It Up')
 
 st.write("""
-By crunching these numbers, we can get a fair idea of which path might lead to a better financial outcome—buying a home or investing in Bitcoin. Remember, this is based on assumptions and estimates. The real world is a great spin bowler, so it's wise to stay informed and maybe have a yarn with a financial advisor, which I am not.
+By crunching these numbers, we can get a fair idea of which path might lead to a better financial outcome—buying a house or investing in Bitcoin. Remember, this is based on assumptions and estimates. The real world is a great spin bowler, so it's wise to stay informed and maybe have a yarn with a financial advisor, which I am not.
 
 At the end of the day, whether you're more comfortable with bricks and mortar or digital assets, understanding the maths can help you make a choice that's right for you.
 
